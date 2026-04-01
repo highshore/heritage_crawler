@@ -1,0 +1,22 @@
+[project]
+name = "heritage-crawler"
+version = "0.1.0"
+description = "Crawler for 국가유산 디지털 서비스 (공공누리 제1유형 images)"
+requires-python = ">=3.11"
+dependencies = [
+    "requests>=2.31",
+    "beautifulsoup4>=4.12",
+    "lxml>=5.0",
+    "loguru>=0.7",
+    "tenacity>=8.2",
+    "tqdm>=4.66",
+    "browser-cookie3>=0.20.1",
+    "boto3>=1.34",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["crawler"]
